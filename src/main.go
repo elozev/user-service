@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/elozev/user-service/routes"
+)
 
 func main() {
-	fmt.Println("Hello, World!");
+	routes.Run();
 }

@@ -26,3 +26,5 @@ go.work.sum
 
 # Ignore binaries folder
 bin/*
+
+src/tmp
