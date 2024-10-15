@@ -1,0 +1,24 @@
+services:
+  app-air:
+    image: cosmtrek/air
+    # working_dir value has to be the same of mapped volume
+    working_dir: /app
+    ports:
+      - 8080:8080
+    # environment:
+    #   - ENV_A=${ENV_A}
+    #   - ENV_B=${ENV_B}
+    #   - ENV_C=${ENV_C}
+    volumes:
+      - ./src/:/app/
+  # app:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 8080:8080
+  mongo:
+    image: mongo:8.0.1
+    restart: always
+    ports:
+      - 27017:27017
